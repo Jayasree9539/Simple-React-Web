@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,500;1,75..100,500&display=swap');
+
+.App {
+    font-family: "Roboto", serif;
+    text-align: center;
+  }
+  * {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  html {
+    font-family: "Roboto", serif;
+  }
+  }
+  .display-flex {
+    display: flex;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  header .logo {
+    font-size: 20px;
+    background: transparent;
+    color: transparent;
+    padding: 6px 12px;
+    border-radius: 7px;
+  }
+  .logo-image {
+    height: 80px; /* Adjust the height as needed */
+    width: 80px; /* Make width equal to height for a perfect circle */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image fills the container properly */
+    background-color: transparent; /* Ensures the background is transparent */
+  }
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    z-index: 10;
+    background-color:transparent;
+    justify-content: space-between;
+  }
+  header:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+  }
+  header:hover .nav a {
+    color: black;
+  }
+  header .nav a {
+    color: white;
+    display: block;
+    margin: 0 5px;
+    padding: 5px;
+  }
+  
+  .hero {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1575305327780-a887f284432f?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position:center ; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 20px;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 32px;
+    color: white; /* Ensures the text is visible on most images */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow to the text for better readability */
+  }
+  footer {
+    background-color: rgba(94, 137, 112, 0.934);
+    padding: 20px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1PX solid #ddd;
+    position: relative;
+    max-width: 20rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  .card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  .card h3  {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom:10px;
+    color: #111827;
+  }
+  .card h5 {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #111827;
+
+  }
+  .card p {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 1.2rem; /* Adjusted padding for better spacing */
+    
+  }
+  .card-text {
+    text-align: center;
+    margin: 2rem 0;
+}
+.card button {
+    align-self: center;
+    padding: 8px 16px;
+    background-color: #042719ee;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 18px;
+}
+.card button:hover {
+    background-color: #05603cfb;
+}
+.card.active button {
+  background-color: rgb(167, 21, 84);
+}
+.card .icon {
+  width: 12px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+}
+.card.active .icon {
+  display: block;
+}
+/* Search bar container */
+.search-bar {
+  flex: 3; /* Make the search bar take the largest space */
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Inner container with rounded background */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #f5f7fa; /* Light gray background */
+  border-radius: 20px; /* Rounded edges */
+  padding: 5px 15px;
+  width: 700px; /* Adjust width as needed */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Search icon */
+.search-icon {
+  font-size: 16px;
+  color: #8b8b8b; /* Light gray icon color */
+  margin-right: 8px; /* Spacing between icon and input */
+}
+
+/* Search input */
+.search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  background-color: transparent;
+  width: 100%;
+  font-size: 14px;
+  color: #4a4a4a; /* Darker text color */
+}
+
+.search-input::placeholder {
+  color: #8b8b8b; /* Placeholder text color */
+}
+
